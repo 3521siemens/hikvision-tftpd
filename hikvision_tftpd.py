@@ -80,7 +80,7 @@ class Server(object):
             len(self._file_contents), self._filename, self._block_size, self._total_blocks)
 
     def _check_total_block_limit(self):
-        if self._total_blocks > 65535:
+        if self._total_blocks > 150000:
             raise Error('File is too big to serve with %d-byte blocks.'
                         % self._block_size)
 
